@@ -1,0 +1,49 @@
+{
+  "name": "cascade-datasource",
+  "version": "0.0.0",
+  "description": "Array and Service Pagination powered by Cascade.",
+  "repository": "https://www.github.com/sjohnsonaz/cascade-datasource.git",
+  "license": "MIT",
+  "author": "Sean Johnson <sjohnson@sjohnsonaz.com>",
+  "main": "dist/scripts/DataSource.js",
+  "typings": "dist/scripts/DataSource.d.ts",
+  "scripts": {
+    "start": "node src/mocha/NodeRunner.js",
+    "install": "",
+    "build": "tsc",
+    "prepublish": "tsc --declaration",
+    "test": "node src/mocha/NodeRunner.js",
+    "min": "webpack --config webpack.config.js",
+    "dev": "webpack --config webpack.dev.config.js",
+    "watch": "webpack --config webpack.dev.config.js --watch"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "cascade": "^0.0.13"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/core-js": "^0.9.35",
+    "@types/mocha": "^2.2.33",
+    "cascade": "^0.0.13",
+    "chai": "^3.5.0",
+    "core-js": "^2.4.1",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.1.4",
+    "webpack": "^1.13.2"
+  },
+  "keywords": [
+    "datasource",
+    "pagination",
+    "array",
+    "service",
+    "cascade",
+    "observablearray",
+    "reactive",
+    "model",
+    "mvvm"
+  ]
+}
