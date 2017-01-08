@@ -17,8 +17,7 @@
     "dev": "webpack --config webpack.dev.config.js",
     "watch": "webpack --config webpack.dev.config.js --watch"
   },
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "cascade": "^0.0.13"
   },
   "devDependencies": {
