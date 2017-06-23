@@ -1,18 +1,34 @@
+# Dependency directory
 node_modules/
+
+# Documentation directory
 docs/
+
+# Source directory
 src/
+
+# Build directory
 dist/bundle/
 dist/tests/
 dist/mocha/
+
+# Sourcemap, log, packed files
 *.map
 *.log
 *.tgz
-cascade-datasource-*
+
+# Ignore files
 .gitignore
 .npmignore
+
+# Build configuration files
 tsconfig.json
 webpack.config.js
 webpack.dev.config.js
-nodemon.json
 .travis.yml
+
+# Editor configuration files
 .vscode/
+
+# MkDocs files
+site
