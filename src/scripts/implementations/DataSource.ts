@@ -69,10 +69,11 @@ export default class DataSource<T> implements IDataSource<T> {
                 this.error = false;
             }
             return results;
-        }).catch(() => {
+        }).catch((results) => {
             if (runID == this.runCount) {
                 this.error = true;
             }
+            return Promise.reject<IPage<T>>(results);
         });
     }
 
