@@ -1,6 +1,6 @@
 {
   "name": "cascade-datasource",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Array and Service Pagination powered by Cascade.",
   "repository": "https://www.github.com/sjohnsonaz/cascade-datasource.git",
   "license": "MIT",
