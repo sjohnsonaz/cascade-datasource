@@ -11,26 +11,26 @@
     "start": "node src/mocha/NodeRunner.js",
     "install": "",
     "build": "tsc",
-    "prepublish": "tsc --declaration",
-    "test": "node src/mocha/NodeRunner.js",
+    "prepublishOnly": "tsc --declaration",
+    "test": "tsc && node src/mocha/NodeRunner.js",
     "min": "webpack --config webpack.config.js --progress",
     "dev": "webpack --config webpack.dev.config.js --progress",
     "watch": "webpack --config webpack.dev.config.js --watch --progress"
   },
   "peerDependencies": {
-    "cascade": "^0.0.24"
+    "cascade": "^0.7.9"
   },
   "devDependencies": {
     "@types/chai": "4.0.1",
     "@types/mocha": "2.2.41",
-    "cascade": "^0.0.24",
+    "cascade": "^0.7.9",
     "chai": "4.0.2",
     "core-js": "2.4.1",
     "jsdom": "11.1.0",
     "mocha": "3.4.2",
     "nodemon": "1.11.0",
     "ts-loader": "2.2.2",
-    "typescript": "2.4.1",
+    "typescript": "3.8.3",
     "webpack": "3.0.0"
   },
   "keywords": [

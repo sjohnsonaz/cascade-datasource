@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
     "isolatedModules": false,
@@ -18,8 +18,8 @@
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "lib": [
-      "dom",
-      "es2015"
+      "es2015",
+      "DOM"
     ]
   },
   "exclude": [
