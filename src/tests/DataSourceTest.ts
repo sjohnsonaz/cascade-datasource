@@ -1,7 +1,8 @@
 import { expect } from 'chai';
 import Cascade, { observable } from 'cascade';
 
-import DataSource from '../scripts/DataSource';
+import DataSource from '../scripts/implementations/DataSource';
+import { pageArray } from '../scripts/util/PageUtil';
 
 describe('DataSource', () => {
     let dataArray = [];
@@ -12,10 +13,10 @@ describe('DataSource', () => {
         var callCount = 0;
         var dataSource = new DataSource<number>((page, pageSize, sortedColumn, sortedDirection) => {
             callCount++;
-            return DataSource.pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
+            return pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
         }, {
-                pageSize: 20
-            });
+            pageSize: 20
+        });
         dataSource.init();
         Cascade.subscribe(dataSource, 'activeRows', (activeRows: number[]) => {
             if (callCount === 2) {
@@ -28,10 +29,10 @@ describe('DataSource', () => {
         var callCount = 0;
         var dataSource = new DataSource<number>((page, pageSize, sortedColumn, sortedDirection) => {
             callCount++;
-            return DataSource.pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
+            return pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
         }, {
-                pageSize: 20
-            });
+            pageSize: 20
+        });
         dataSource.init();
         dataSource.page = 1;
         Cascade.subscribe(dataSource, 'activeRows', (activeRows: number[]) => {
@@ -45,10 +46,10 @@ describe('DataSource', () => {
         var callCount = 0;
         var dataSource = new DataSource<number>((page, pageSize, sortedColumn, sortedDirection) => {
             callCount++;
-            return DataSource.pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
+            return pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
         }, {
-                pageSize: 20
-            });
+            pageSize: 20
+        });
         dataSource.init();
         dataSource.page = 5;
         Cascade.subscribe(dataSource, 'activeRows', (activeRows: number[]) => {
@@ -62,10 +63,10 @@ describe('DataSource', () => {
         var callCount = 0;
         var dataSource = new DataSource<number>((page, pageSize, sortedColumn, sortedDirection) => {
             callCount++;
-            return DataSource.pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
+            return pageArray(dataArray, page, pageSize, sortedColumn, sortedDirection);
         }, {
-                pageSize: 20
-            });
+            pageSize: 20
+        });
         dataSource.init();
         dataSource.pageSize = 30;
         Cascade.subscribe(dataSource, 'activeRows', (activeRows: number[]) => {

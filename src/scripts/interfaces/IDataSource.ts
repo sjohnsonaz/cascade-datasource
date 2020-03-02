@@ -1,9 +1,6 @@
-export type RefreshCallback<T> = (page: number, pageSize: number, sortedColumn: string, sortedDirection: boolean) => Promise<IPage<T>>;
+import { IPage } from "./IPage";
 
-export interface IPage<T> {
-    data: T[];
-    count: number;
-}
+export type RefreshCallback<T> = (page: number, pageSize: number, sortedColumn: string, sortedDirection: boolean) => Promise<IPage<T>>;
 
 export interface IDataSourceParams<T> {
     pageSize?: number;
