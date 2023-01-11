@@ -27,7 +27,7 @@
     "chai": "4.0.2",
     "core-js": "2.4.1",
     "jsdom": "11.1.0",
-    "mocha": "3.4.2",
+    "mocha": "3.5.3",
     "nodemon": "1.11.0",
     "ts-loader": "2.2.2",
     "typescript": "3.8.3",
